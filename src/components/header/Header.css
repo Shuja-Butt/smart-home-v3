@@ -1,0 +1,172 @@
+
+
+
+
+#header {
+  position: relative;
+}
+.header {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header h1 {
+  padding-top: 5rem;
+  font-size: 3rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-white);
+  position: relative;
+  padding-bottom: 0rem;
+}
+
+.header h1 span {
+  display: block;
+}
+
+h1 span:nth-child(1) {
+  font-weight: 800;
+}
+
+h1 span:nth-child(2),
+h1 span:nth-child(3) {
+  font-weight: 100;
+}
+
+.header h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 65%;
+  height: 1px;
+  background: var(--color-white);
+}
+
+.header-left p {
+  margin: 3rem 0;
+  color: var(--color-white);
+  width: 80%;
+}
+
+.header-right img {
+  width: 100%;
+}
+
+
+.auth-message{
+  cursor:pointer;
+}
+
+.floating-icon {
+  background-color: var(--color-white);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.floating-icon a {
+  border: 1px solid #fff;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse {
+  transform: translateY(-25%);
+  animation: bounce 0.8s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header-left,
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .header-left {
+    margin-bottom: 4rem;
+  }
+
+  .header h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header-right img {
+    width: 80%;
+  }
+}
+
+h6{
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2vw;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(45deg, 
+                    #ffffff, 
+                    #ffffff,
+                    #ffffff,
+                    #ffffff);
+  animation: 1s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-20deg); }
+  5% { transform: skewX(20deg); }
+  10% { transform: skewX(-20deg); }
+  15% { transform: skewX(20deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
