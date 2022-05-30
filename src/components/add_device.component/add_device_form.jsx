@@ -55,7 +55,7 @@ const AddDeviceForm = ({displayHandler,upDateDevices})=> {
 
         // window.alert(`access token recieved ${response.accessToken}`);
 
-        fetch(`http://localhost:5000/device/addnew`,{
+        fetch(`https://smart-home-controller-api.herokuapp.com/device/addnew`,{
 
             method:'POST',
             headers:{

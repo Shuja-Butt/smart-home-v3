@@ -54,7 +54,7 @@ const RemoveDeviceForm = ({upDateDevices})=> {
 
         // window.alert(`access token recieved ${response.accessToken}`);
 
-        fetch(`http://localhost:5000/devices/${category}/${state.id}`,{
+        fetch(`https://smart-home-controller-api.herokuapp.com/devices/${category}/${state.id}`,{
 
             method:'DELETE',
             headers:{

@@ -71,7 +71,7 @@ const DeviceRegistration = () => {
             account: account// get access token for this account
         }).then((response) => {
 
-        fetch(`http://localhost:5000/schedule/`, {
+        fetch(`https://smart-home-controller-api.herokuapp.com/schedule/`, {
 
             method: 'POST',
             headers: {
@@ -146,7 +146,7 @@ const DeviceRegistration = () => {
     const callDeviceMethod = (e, deviceData) => {
         console.log(deviceData,"io",`Device${e.target.getAttribute('deviceId')}${e.target.innerHTML.toLowerCase()}`)
 
-        let uri = 'http://localhost:5000/devices/'
+        let uri = 'https://smart-home-controller-api.herokuapp.com/devices/'
         let methodname = 'method1'
         // console.log(deviceData.name, "see the device data", e.target.innerHTML)
         // if (deviceData.name === 'Led1' && e.target.innerHTML === 'On') {
@@ -250,7 +250,7 @@ const DeviceRegistration = () => {
 
                 // window.alert(`access token recieved ${response.accessToken}`);
 
-                fetch(`http://localhost:5000/devices/${category}`, {
+                fetch(`https://smart-home-controller-api.herokuapp.com/devices/${category}`, {
 
                     method: 'GET',
                     headers: {

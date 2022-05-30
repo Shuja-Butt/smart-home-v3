@@ -90,7 +90,7 @@ export const msalConfig = {
  */
 export const protectedResources = {
     smartHomeAPI: {
-        endpoint: "http://localhost:5000/device/addnew",
+        endpoint: "https://smart-home-controller-api.herokuapp.com/device/addnew",
         scopes: ["https://smarthomesolutionsmain.onmicrosoft.com/dbe0876d-647d-4069-bf0d-4ec48cbc055b/devices.read"], // e.g. api://xxxxxx/access_as_user
     },
 }
